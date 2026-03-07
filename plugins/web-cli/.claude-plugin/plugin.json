@@ -1,0 +1,5 @@
+{
+  "name": "web-cli",
+  "description": "Web browser CLI for testing and verifying web pages during development",
+  "version": "1.0.0"
+}

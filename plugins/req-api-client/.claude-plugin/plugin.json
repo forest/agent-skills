@@ -1,0 +1,5 @@
+{
+  "name": "req-api-client",
+  "description": "Build HTTP API clients and SDK wrappers using Elixir's Req library",
+  "version": "1.0.0"
+}

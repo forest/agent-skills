@@ -1,0 +1,30 @@
+{
+  "name": "forest-claude-tools",
+  "owner": {
+    "name": "forest"
+  },
+  "metadata": {
+    "description": "Opinionated skills for improving daily work efficiency with Claude",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "req-api-client",
+      "source": "./req-api-client",
+      "description": "Build HTTP API clients and SDK wrappers using Elixir's Req library",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tidewave-tools-usage",
+      "source": "./tidewave-tools-usage",
+      "description": "Prioritize Tidewave MCP tools for Elixir/Phoenix development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "web-cli",
+      "source": "./web-cli",
+      "description": "Web browser CLI for testing and verifying web pages during development",
+      "version": "1.0.0"
+    }
+  ]
+}

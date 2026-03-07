@@ -24,11 +24,10 @@ This method works with multiple AI coding agents (Claude Code, Codex, Cursor, et
 
 ### Register as Plugin Marketplace
 
-Run the following commands in Claude Code:
+Run the following command in Claude Code:
 
-```bash
+```
 /plugin marketplace add forest/agent-skills
-/plugin
 ```
 
 ### Install Plugins
@@ -36,15 +35,16 @@ Run the following commands in Claude Code:
 **Option 1: Via Browse UI**
 
 1. Switch to **Marketplaces** tab (use arrow keys or Tab)
-2. Select **agent-skills**, press Enter
+2. Select **forest-claude-tools**, press Enter
 3. Browse and select the plugin(s) you want to install
 4. Select **Install now**
 
 **Option 2: Direct Install**
 
-```bash
-# Install specific skill
-/plugin install skills@agent-skills
+```
+/plugin install req-api-client@forest-claude-tools
+/plugin install tidewave-tools-usage@forest-claude-tools
+/plugin install web-cli@forest-claude-tools
 ```
 
 ## 📖 Skill Structure
