@@ -1,75 +1,72 @@
 # Agent Skills
 
-Opinionated skills for improving daily work efficiency with Claude, etc. Skills are packaged instructions and scripts that extend agent capabilities across development, documentation, planning, and professional workflows.
-
-Skills follow the [Agent Skills](https://agentskills.io/) format.
+Opinionated Claude Code plugins for Elixir development and session management. Packaged as installable plugins following the [Agent Skills](https://agentskills.io/) format.
 
 ---
 
-## 🧭 Quick Navigation
+## Skills
 
-**[🚀 Installation](#-installation)** • **[📖 Skill Structure](#-skill-structure)** • **[🤝 Contributing](#-contributing)** • **[🔗 Links](#-links)**
+| Plugin | What it does |
+|--------|-------------|
+| `req-api-client` | Patterns for building Elixir HTTP API clients with Req: module wrappers, plugin architecture, `Req.Test` stubs, webhook signature verification |
+| `session-handoff` | Generates deterministic session summaries for handoff between Claude sessions — preserves decisions, rationale, and rejected options without auto-compact inference |
+| `tidewave-tools-usage` | Prioritizes Tidewave MCP tools over file system ops for Elixir/Phoenix/Ash work: live code evaluation, module navigation, SQL execution, schema introspection |
+| `web-cli` | Browser CLI (`web`) for verifying web pages during development: JS rendering, form submission, session persistence, Phoenix LiveView support |
 
 ---
 
-## 🚀 Installation
+## Installation
 
-### Quick Install (Recommended)
+### Claude Code
 
-```bash
-npx skills add forest/agent-skills
-```
-
-This method works with multiple AI coding agents (Claude Code, Codex, Cursor, etc.)
-
-### Register as Plugin Marketplace
-
-Run the following command in Claude Code:
+Register this repo as a plugin marketplace:
 
 ```
 /plugin marketplace add forest/agent-skills
 ```
 
-### Install Plugins
-
-**Option 1: Via Browse UI**
-
-1. Switch to **Marketplaces** tab (use arrow keys or Tab)
-2. Select **forest-claude-tools**, press Enter
-3. Browse and select the plugin(s) you want to install
-4. Select **Install now**
-
-**Option 2: Direct Install**
+Then install individual plugins:
 
 ```
 /plugin install req-api-client@forest-claude-tools
+/plugin install session-handoff@forest-claude-tools
 /plugin install tidewave-tools-usage@forest-claude-tools
 /plugin install web-cli@forest-claude-tools
 ```
 
-## 📖 Skill Structure
+### Other Agents (Codex, Cursor, etc.)
 
-Each skill contains:
-
-- `SKILL.md` - Detailed instructions for the agent (with YAML frontmatter)
-- `README.md` - User-friendly documentation with examples
-- `scripts/` - Helper scripts for automation (optional)
-- `references/` - Supporting documentation (optional)
+```bash
+npx skills add forest/agent-skills
+```
 
 ---
 
-## 🤝 Contributing
+## Skill Structure
 
-Contributions are welcome! When adding new skills:
+Each plugin contains a `SKILL.md` with YAML frontmatter (`name`, `description`) used for agent discovery, and the skill content itself.
+
+```
+plugins/
+  skill-name/
+    .claude-plugin/
+      plugin.json          # Plugin manifest (name, description, version)
+    skills/
+      skill-name/
+        SKILL.md           # Agent instructions with YAML frontmatter
+```
+
+---
+
+## Contributing
 
 1. Follow the [Agent Skills](https://agentskills.io/) format
-2. Include both `SKILL.md` (for agents) and `README.md` (for users)
-3. Add YAML frontmatter to `SKILL.md` with `name:` and `description:` fields
+2. Add a `plugin.json` manifest under `.claude-plugin/`
+3. Add `name` and `description` YAML frontmatter to `SKILL.md` — the `description` field drives agent discovery, so make it specific
 
 ---
 
-## 🔗 Links
+## Links
 
 - [Agent Skills Format](https://agentskills.io/)
 - [Claude Code Documentation](https://docs.anthropic.com/claude/docs)
-- [GitHub Repository](https://github.com/forest/agent-skills)
