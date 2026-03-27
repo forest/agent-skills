@@ -24,6 +24,12 @@
       "source": "./plugins/web-cli",
       "description": "Web browser CLI for testing and verifying web pages during development",
       "version": "1.0.0"
+    },
+    {
+      "name": "session-handoff",
+      "source": "./plugins/session-handoff",
+      "description": "Generates deterministic session summaries for handoff between Claude sessions — preserves decisions, rationale, and rejected options without auto-compact inference",
+      "version": "1.0.0"
     }
   ]
 }
