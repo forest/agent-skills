@@ -1,0 +1,5 @@
+{
+  "name": "repo-coordinator",
+  "description": "Coordinate feature work on a software repository from the next milestone through PR merge",
+  "version": "1.0.0"
+}

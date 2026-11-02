@@ -1,6 +1,6 @@
 # Agent Skills
 
-Opinionated Claude Code plugins for Elixir development and session management. Packaged as installable plugins following the [Agent Skills](https://agentskills.io/) format.
+Opinionated Claude Code plugins for Elixir development, session management, and repository coordination. Packaged as installable plugins following the [Agent Skills](https://agentskills.io/) format.
 
 ---
 
@@ -12,6 +12,7 @@ Opinionated Claude Code plugins for Elixir development and session management. P
 | `session-handoff` | Generates deterministic session summaries for handoff between Claude sessions — preserves decisions, rationale, and rejected options without auto-compact inference |
 | `tidewave-tools-usage` | Prioritizes Tidewave MCP tools over file system ops for Elixir/Phoenix/Ash work: live code evaluation, module navigation, SQL execution, schema introspection |
 | `web-cli` | Browser CLI (`web`) for verifying web pages during development: JS rendering, form submission, session persistence, Phoenix LiveView support |
+| `repo-coordinator` | Coordinates feature work on a repository end to end: choosing the next milestone, GitHub milestones and issues as the source of truth, handoffs to spec and coding agents, and tracking PRs through merge |
 
 ---
 
@@ -32,6 +33,7 @@ Then install individual plugins:
 /plugin install session-handoff@forest-claude-tools
 /plugin install tidewave-tools-usage@forest-claude-tools
 /plugin install web-cli@forest-claude-tools
+/plugin install repo-coordinator@forest-claude-tools
 ```
 
 ### Other Agents (Codex, Cursor, etc.)
