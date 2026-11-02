@@ -30,6 +30,12 @@
       "source": "./plugins/session-handoff",
       "description": "Generates deterministic session summaries for handoff between Claude sessions — preserves decisions, rationale, and rejected options without auto-compact inference",
       "version": "1.0.0"
+    },
+    {
+      "name": "repo-coordinator",
+      "source": "./plugins/repo-coordinator",
+      "description": "Coordinate feature work on a software repository from the next milestone through PR merge",
+      "version": "1.0.0"
     }
   ]
 }
